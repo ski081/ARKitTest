@@ -88,8 +88,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Places multiple textures objectrs into user space on tap" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ph0-I4-RQQ">
-                                                    <rect key="frame" x="16" y="25.5" width="314" height="14.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Places multiple textured objects into user space on tap" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ph0-I4-RQQ">
+                                                    <rect key="frame" x="16" y="25.5" width="310.5" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -99,6 +99,33 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="sR6-iu-GVd" kind="show" id="6aq-qi-ppI"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="IUQ-fV-N4q" detailTextLabel="Unj-zK-zCk" style="IBUITableViewCellStyleSubtitle" id="Dt3-Aj-rie">
+                                        <rect key="frame" x="0.0" y="132" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dt3-Aj-rie" id="Ao6-Oh-miF">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Tap Gestures" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IUQ-fV-N4q">
+                                                    <rect key="frame" x="16" y="5" width="101.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Change object colors with taps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Unj-zK-zCk">
+                                                    <rect key="frame" x="16" y="25.5" width="175.5" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="fPe-Zx-4ww" kind="show" id="wqV-9w-fnZ"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -152,7 +179,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bE9-go-fEZ">
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bE9-go-fEZ" userLabel="sceneView">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </arscnView>
                         </subviews>
@@ -188,6 +215,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="836" y="-269"/>
+        </scene>
+        <!--Taps View Controller-->
+        <scene sceneID="uoU-1A-S4P">
+            <objects>
+                <viewController id="fPe-Zx-4ww" customClass="TapsViewController" customModule="ARKitTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="wK2-6J-1eo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DFX-jq-l4C">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Xcf-FG-45J" appends="YES" id="WF5-SS-LKJ"/>
+                                </connections>
+                            </arscnView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DFX-jq-l4C" firstAttribute="top" secondItem="wK2-6J-1eo" secondAttribute="top" id="G9J-FW-8yv"/>
+                            <constraint firstItem="DFX-jq-l4C" firstAttribute="trailing" secondItem="aBb-at-5Zn" secondAttribute="trailing" id="K9K-OR-EsL"/>
+                            <constraint firstItem="DFX-jq-l4C" firstAttribute="bottom" secondItem="aBb-at-5Zn" secondAttribute="bottom" id="fzV-VG-YFi"/>
+                            <constraint firstItem="DFX-jq-l4C" firstAttribute="leading" secondItem="aBb-at-5Zn" secondAttribute="leading" id="wLV-5M-bLh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aBb-at-5Zn"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="DFX-jq-l4C" id="Ct1-bR-buj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3SB-mE-0NH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Xcf-FG-45J">
+                    <connections>
+                        <action selector="sceneViewTapped:" destination="fPe-Zx-4ww" id="JDr-ez-XrL"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1604" y="-248.72563718140933"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nZL-j3-jlG">

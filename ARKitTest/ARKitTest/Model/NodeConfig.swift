@@ -10,8 +10,11 @@ import Foundation
 import UIKit
 
 struct NodeConfig {
-    let width: CGFloat
+    let width: CGFloat 
     let height: CGFloat
     let length: CGFloat
     let chamferRadius: CGFloat
+    let color: UIColor
+    let image: UIImage?
+    let colorName = "Color"
 }

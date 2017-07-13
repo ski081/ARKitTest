@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		931822901F181401004F07B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93BABB561F169FC1006145D3 /* Assets.xcassets */; };
+		931822921F181501004F07B8 /* TapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931822911F181501004F07B8 /* TapsViewController.swift */; };
+		931822951F181709004F07B8 /* CGFloat+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931822941F181709004F07B8 /* CGFloat+Random.swift */; };
+		931822971F181764004F07B8 /* UIColor+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931822961F181764004F07B8 /* UIColor+Random.swift */; };
+		931822991F18198E004F07B8 /* BaseSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931822981F18198E004F07B8 /* BaseSceneViewController.swift */; };
+		938BF6661F17197F004D81F2 /* Sphere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938BF6651F17197F004D81F2 /* Sphere.swift */; };
 		93BABB361F168DA5006145D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BABB351F168DA5006145D3 /* AppDelegate.swift */; };
 		93BABB571F16A1DB006145D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93BABB4E1F169FC1006145D3 /* LaunchScreen.storyboard */; };
 		93BABB581F16A1DE006145D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93BABB501F169FC1006145D3 /* Main.storyboard */; };
@@ -15,10 +21,15 @@
 		93BABB5C1F16B0AE006145D3 /* TextDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BABB5B1F16B0AE006145D3 /* TextDisplayViewController.swift */; };
 		93BABB5E1F16B497006145D3 /* MultipleSphereViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BABB5D1F16B497006145D3 /* MultipleSphereViewController.swift */; };
 		93BABB611F16B56C006145D3 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BABB601F16B56C006145D3 /* Box.swift */; };
-		93BABB631F16B60F006145D3 /* SceneConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BABB621F16B60F006145D3 /* SceneConfig.swift */; };
+		93BABB631F16B60F006145D3 /* NodeConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BABB621F16B60F006145D3 /* NodeConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		931822911F181501004F07B8 /* TapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapsViewController.swift; sourceTree = "<group>"; };
+		931822941F181709004F07B8 /* CGFloat+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Random.swift"; sourceTree = "<group>"; };
+		931822961F181764004F07B8 /* UIColor+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Random.swift"; sourceTree = "<group>"; };
+		931822981F18198E004F07B8 /* BaseSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSceneViewController.swift; sourceTree = "<group>"; };
+		938BF6651F17197F004D81F2 /* Sphere.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sphere.swift; sourceTree = "<group>"; };
 		93BABB321F168DA5006145D3 /* ARKitTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARKitTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93BABB351F168DA5006145D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93BABB4C1F169FA1006145D3 /* SimpleCubeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCubeViewController.swift; sourceTree = "<group>"; };
@@ -30,7 +41,7 @@
 		93BABB5B1F16B0AE006145D3 /* TextDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDisplayViewController.swift; sourceTree = "<group>"; };
 		93BABB5D1F16B497006145D3 /* MultipleSphereViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleSphereViewController.swift; sourceTree = "<group>"; };
 		93BABB601F16B56C006145D3 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
-		93BABB621F16B60F006145D3 /* SceneConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneConfig.swift; sourceTree = "<group>"; };
+		93BABB621F16B60F006145D3 /* NodeConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +55,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		931822931F1816EE004F07B8 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				931822941F181709004F07B8 /* CGFloat+Random.swift */,
+				931822961F181764004F07B8 /* UIColor+Random.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		93BABB291F168DA5006145D3 = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +86,7 @@
 				93BABB351F168DA5006145D3 /* AppDelegate.swift */,
 				93BABB4B1F169FA1006145D3 /* ViewControllers */,
 				93BABB5F1F16B540006145D3 /* Model */,
+				931822931F1816EE004F07B8 /* Util */,
 				93BABB4A1F169F3F006145D3 /* Resources */,
 			);
 			path = ARKitTest;
@@ -84,9 +105,11 @@
 		93BABB4B1F169FA1006145D3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				931822981F18198E004F07B8 /* BaseSceneViewController.swift */,
 				93BABB4C1F169FA1006145D3 /* SimpleCubeViewController.swift */,
 				93BABB5B1F16B0AE006145D3 /* TextDisplayViewController.swift */,
 				93BABB5D1F16B497006145D3 /* MultipleSphereViewController.swift */,
+				931822911F181501004F07B8 /* TapsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -121,7 +144,8 @@
 			isa = PBXGroup;
 			children = (
 				93BABB601F16B56C006145D3 /* Box.swift */,
-				93BABB621F16B60F006145D3 /* SceneConfig.swift */,
+				93BABB621F16B60F006145D3 /* NodeConfig.swift */,
+				938BF6651F17197F004D81F2 /* Sphere.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -184,6 +208,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				931822901F181401004F07B8 /* Assets.xcassets in Resources */,
 				93BABB571F16A1DB006145D3 /* LaunchScreen.storyboard in Resources */,
 				93BABB5A1F16ADC0006145D3 /* art.scnassets in Resources */,
 				93BABB581F16A1DE006145D3 /* Main.storyboard in Resources */,
@@ -197,11 +222,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				931822971F181764004F07B8 /* UIColor+Random.swift in Sources */,
+				938BF6661F17197F004D81F2 /* Sphere.swift in Sources */,
 				93BABB361F168DA5006145D3 /* AppDelegate.swift in Sources */,
+				931822921F181501004F07B8 /* TapsViewController.swift in Sources */,
 				93BABB591F16A1FE006145D3 /* SimpleCubeViewController.swift in Sources */,
 				93BABB5C1F16B0AE006145D3 /* TextDisplayViewController.swift in Sources */,
+				931822991F18198E004F07B8 /* BaseSceneViewController.swift in Sources */,
+				931822951F181709004F07B8 /* CGFloat+Random.swift in Sources */,
 				93BABB5E1F16B497006145D3 /* MultipleSphereViewController.swift in Sources */,
-				93BABB631F16B60F006145D3 /* SceneConfig.swift in Sources */,
+				93BABB631F16B60F006145D3 /* NodeConfig.swift in Sources */,
 				93BABB611F16B56C006145D3 /* Box.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -384,6 +414,7 @@
 				93BABB481F168DA5006145D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

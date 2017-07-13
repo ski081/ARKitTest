@@ -19,7 +19,30 @@ class MultipleSphereViewController: UIViewController {
         // Show statistics such as fps and timing information
         sceneView.showsStatistics = true
         
+        // Create a new scene
+        let boxImage = UIImage(named: "texture-brick")
+        let config = NodeConfig(width: 0.2,
+                                height: 0.2,
+                                length: 0.2,
+                                chamferRadius: 0.0,
+                                color: UIColor.red,
+                                image: boxImage)
+        let vector = SCNVector3(0.0, 0.1, -0.5)
         
+        let scene = SCNScene()
+        let node = Box.boxNode(forVector3: vector,
+                               nodeConfig: config)
+        scene.rootNode.addChildNode(node)
+        
+        let sphereVector = SCNVector3(0.5, 0.1, -1)
+        let image = UIImage(named: "texture-earth")
+        let sphereNode = Sphere.sphereNode(withRadius: 0.2,
+                                           vector: sphereVector,
+                                           color: UIColor.green, image: image)
+        scene.rootNode.addChildNode(sphereNode)
+        
+        // Set the scene to the view
+        sceneView.scene = scene
     }
     
     override func viewWillAppear(_ animated: Bool) {

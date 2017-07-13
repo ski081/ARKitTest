@@ -1,8 +1,8 @@
 //
-//  ViewController.swift
+//  BaseSceneViewController.swift
 //  ARKitTest
 //
-//  Created by Struzinski, Mark - Mark on 7/12/17.
+//  Created by Struzinski, Mark - Mark on 7/13/17.
 //  Copyright © 2017 mstruzinski. All rights reserved.
 //
 
@@ -10,8 +10,7 @@ import UIKit
 import SceneKit
 import ARKit
 
-class SimpleCubeViewController: UIViewController {
-
+class BaseSceneViewController: UIViewController {
     @IBOutlet var sceneView: ARSCNView!
     
     override func viewDidLoad() {
@@ -19,23 +18,6 @@ class SimpleCubeViewController: UIViewController {
         
         // Show statistics such as fps and timing information
         sceneView.showsStatistics = true
-        
-        // Create a new scene
-        let config = NodeConfig(width: 0.2,
-                                height: 0.2,
-                                length: 0.2,
-                                chamferRadius: 0.0,
-                                color: UIColor.red,
-                                image: nil)
-        let vector = SCNVector3(0.0, 0.1, -0.5)
-
-        let scene = SCNScene()
-        let node = Box.boxNode(forVector3: vector,
-                               nodeConfig: config)
-        scene.rootNode.addChildNode(node)
-        
-        // Set the scene to the view
-        sceneView.scene = scene
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -54,4 +36,5 @@ class SimpleCubeViewController: UIViewController {
         // Pause the view's session
         sceneView.session.pause()
     }
+
 }

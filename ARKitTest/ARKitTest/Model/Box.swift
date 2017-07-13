@@ -10,14 +10,16 @@ import Foundation
 import SceneKit
 
 struct Box {
-    static func boxNode(forVector3 vector: SCNVector3, nodeConfig: NodeConfig, color: UIColor) -> SCNNode {
+    static func boxNode(forVector3 vector: SCNVector3,
+                        nodeConfig: NodeConfig) -> SCNNode {
         let box = SCNBox(width: nodeConfig.width,
                          height: nodeConfig.height,
                          length: nodeConfig.length,
                          chamferRadius: nodeConfig.chamferRadius)
 
         let material = SCNMaterial()
-        material.diffuse.contents = color
+        material.diffuse.contents = nodeConfig.image ?? nodeConfig.color
+        material.name = nodeConfig.colorName
         
         let node = SCNNode()
         node.geometry = box
