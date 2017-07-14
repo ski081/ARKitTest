@@ -128,6 +128,33 @@
                                             <segue destination="fPe-Zx-4ww" kind="show" id="wqV-9w-fnZ"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="auB-X4-t6m" detailTextLabel="Ayt-92-ss2" style="IBUITableViewCellStyleSubtitle" id="hnN-KA-f35">
+                                        <rect key="frame" x="0.0" y="176" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hnN-KA-f35" id="Jyd-Kx-I9v">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Plane Detection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="auB-X4-t6m">
+                                                    <rect key="frame" x="16" y="5" width="121" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detect planes and place a marker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ayt-92-ss2">
+                                                    <rect key="frame" x="16" y="25.5" width="189.5" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="1qm-Zy-P0T" kind="show" id="gz7-Ac-Jit"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -170,6 +197,45 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eg2-nf-EyA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="836" y="404"/>
+        </scene>
+        <!--Plane View Controller-->
+        <scene sceneID="bdN-yA-beH">
+            <objects>
+                <viewController id="1qm-Zy-P0T" customClass="PlaneViewController" customModule="ARKitTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="yrJ-Kh-W6f">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vIz-gA-HKE">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </arscnView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBZ-0Q-78z">
+                                <rect key="frame" x="16" y="95" width="343" height="33.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vIz-gA-HKE" firstAttribute="trailing" secondItem="VLF-hA-Xie" secondAttribute="trailing" id="052-Zf-W4b"/>
+                            <constraint firstItem="PBZ-0Q-78z" firstAttribute="top" secondItem="VLF-hA-Xie" secondAttribute="top" constant="31" id="9QJ-Kh-JJQ"/>
+                            <constraint firstItem="vIz-gA-HKE" firstAttribute="bottom" secondItem="VLF-hA-Xie" secondAttribute="bottom" id="MZc-Zx-Pos"/>
+                            <constraint firstItem="PBZ-0Q-78z" firstAttribute="leading" secondItem="VLF-hA-Xie" secondAttribute="leading" constant="16" id="Ok0-vj-zqc"/>
+                            <constraint firstItem="VLF-hA-Xie" firstAttribute="trailing" secondItem="PBZ-0Q-78z" secondAttribute="trailing" constant="16" id="goe-7A-jjL"/>
+                            <constraint firstItem="vIz-gA-HKE" firstAttribute="leading" secondItem="VLF-hA-Xie" secondAttribute="leading" id="krO-3H-BoZ"/>
+                            <constraint firstItem="vIz-gA-HKE" firstAttribute="top" secondItem="VLF-hA-Xie" secondAttribute="top" id="qnO-LW-KEi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VLF-hA-Xie"/>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="PBZ-0Q-78z" id="w2c-UY-4gR"/>
+                        <outlet property="sceneView" destination="vIz-gA-HKE" id="PmB-ii-B1f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ekz-2e-0Vw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1604" y="402.54872563718146"/>
         </scene>
         <!--Multiple Sphere View Controller-->
         <scene sceneID="NYN-rP-6E4">

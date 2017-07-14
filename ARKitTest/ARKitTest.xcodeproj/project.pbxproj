@@ -12,6 +12,8 @@
 		931822951F181709004F07B8 /* CGFloat+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931822941F181709004F07B8 /* CGFloat+Random.swift */; };
 		931822971F181764004F07B8 /* UIColor+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931822961F181764004F07B8 /* UIColor+Random.swift */; };
 		931822991F18198E004F07B8 /* BaseSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931822981F18198E004F07B8 /* BaseSceneViewController.swift */; };
+		9318229B1F184070004F07B8 /* PlaneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9318229A1F184070004F07B8 /* PlaneViewController.swift */; };
+		9318229E1F184580004F07B8 /* OverlayPlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9318229D1F184580004F07B8 /* OverlayPlane.swift */; };
 		938BF6661F17197F004D81F2 /* Sphere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938BF6651F17197F004D81F2 /* Sphere.swift */; };
 		93BABB361F168DA5006145D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BABB351F168DA5006145D3 /* AppDelegate.swift */; };
 		93BABB571F16A1DB006145D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93BABB4E1F169FC1006145D3 /* LaunchScreen.storyboard */; };
@@ -29,6 +31,8 @@
 		931822941F181709004F07B8 /* CGFloat+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Random.swift"; sourceTree = "<group>"; };
 		931822961F181764004F07B8 /* UIColor+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Random.swift"; sourceTree = "<group>"; };
 		931822981F18198E004F07B8 /* BaseSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSceneViewController.swift; sourceTree = "<group>"; };
+		9318229A1F184070004F07B8 /* PlaneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneViewController.swift; sourceTree = "<group>"; };
+		9318229D1F184580004F07B8 /* OverlayPlane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayPlane.swift; sourceTree = "<group>"; };
 		938BF6651F17197F004D81F2 /* Sphere.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sphere.swift; sourceTree = "<group>"; };
 		93BABB321F168DA5006145D3 /* ARKitTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARKitTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93BABB351F168DA5006145D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +68,14 @@
 			path = Util;
 			sourceTree = "<group>";
 		};
+		9318229C1F18454E004F07B8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9318229D1F184580004F07B8 /* OverlayPlane.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		93BABB291F168DA5006145D3 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +97,7 @@
 			children = (
 				93BABB351F168DA5006145D3 /* AppDelegate.swift */,
 				93BABB4B1F169FA1006145D3 /* ViewControllers */,
+				9318229C1F18454E004F07B8 /* Views */,
 				93BABB5F1F16B540006145D3 /* Model */,
 				931822931F1816EE004F07B8 /* Util */,
 				93BABB4A1F169F3F006145D3 /* Resources */,
@@ -110,6 +123,7 @@
 				93BABB5B1F16B0AE006145D3 /* TextDisplayViewController.swift */,
 				93BABB5D1F16B497006145D3 /* MultipleSphereViewController.swift */,
 				931822911F181501004F07B8 /* TapsViewController.swift */,
+				9318229A1F184070004F07B8 /* PlaneViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -226,9 +240,11 @@
 				938BF6661F17197F004D81F2 /* Sphere.swift in Sources */,
 				93BABB361F168DA5006145D3 /* AppDelegate.swift in Sources */,
 				931822921F181501004F07B8 /* TapsViewController.swift in Sources */,
+				9318229E1F184580004F07B8 /* OverlayPlane.swift in Sources */,
 				93BABB591F16A1FE006145D3 /* SimpleCubeViewController.swift in Sources */,
 				93BABB5C1F16B0AE006145D3 /* TextDisplayViewController.swift in Sources */,
 				931822991F18198E004F07B8 /* BaseSceneViewController.swift in Sources */,
+				9318229B1F184070004F07B8 /* PlaneViewController.swift in Sources */,
 				931822951F181709004F07B8 /* CGFloat+Random.swift in Sources */,
 				93BABB5E1F16B497006145D3 /* MultipleSphereViewController.swift in Sources */,
 				93BABB631F16B60F006145D3 /* NodeConfig.swift in Sources */,
