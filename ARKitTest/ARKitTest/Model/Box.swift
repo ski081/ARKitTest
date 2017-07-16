@@ -9,6 +9,11 @@
 import Foundation
 import SceneKit
 
+enum BodyType: Int {
+    case box = 1
+    case plane = 2
+}
+
 struct Box {
     static func boxNode(forVector3 vector: SCNVector3,
                         nodeConfig: NodeConfig) -> SCNNode {

@@ -18,6 +18,11 @@ class BaseSceneViewController: UIViewController {
         
         // Show statistics such as fps and timing information
         sceneView.showsStatistics = true
+        sceneView.debugOptions = [
+            ARSCNDebugOptions.showFeaturePoints,
+            ARSCNDebugOptions.showWorldOrigin
+        ]
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -25,7 +30,10 @@ class BaseSceneViewController: UIViewController {
         
         // Create a session configuration
         let configuration = ARWorldTrackingSessionConfiguration()
-        
+
+        // Enable plane detection
+        configuration.planeDetection = .horizontal
+
         // Run the view's session
         sceneView.session.run(configuration)
     }

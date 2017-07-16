@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qS9-d4-1bl">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Force View Controller-->
+        <scene sceneID="wGu-Ke-dcs">
+            <objects>
+                <viewController id="qS9-d4-1bl" customClass="ForceViewController" customModule="ARKitTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="tcd-eX-P9p">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lxu-uT-O7M">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="L2p-m9-sgg" appends="YES" id="Vkf-Rh-4Sa"/>
+                                    <outletCollection property="gestureRecognizers" destination="FV4-31-FbL" appends="YES" id="S4E-my-Tev"/>
+                                </connections>
+                            </arscnView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Lxu-uT-O7M" firstAttribute="leading" secondItem="RSx-Wi-DeC" secondAttribute="leading" id="31T-Jy-T8T"/>
+                            <constraint firstItem="Lxu-uT-O7M" firstAttribute="trailing" secondItem="RSx-Wi-DeC" secondAttribute="trailing" id="HIm-fj-tLB"/>
+                            <constraint firstItem="Lxu-uT-O7M" firstAttribute="bottom" secondItem="RSx-Wi-DeC" secondAttribute="bottom" id="VKG-ir-fHh"/>
+                            <constraint firstItem="Lxu-uT-O7M" firstAttribute="top" secondItem="tcd-eX-P9p" secondAttribute="top" id="ego-EO-nPm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RSx-Wi-DeC"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="doubleTapGestureRecognizer" destination="FV4-31-FbL" id="sCB-1s-23i"/>
+                        <outlet property="sceneView" destination="Lxu-uT-O7M" id="1fb-Ls-wIO"/>
+                        <outlet property="singleTapGestureRecognizer" destination="L2p-m9-sgg" id="UTj-AQ-nku"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D5P-jr-sel" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="L2p-m9-sgg" userLabel="singleTapGestureRecognizer">
+                    <connections>
+                        <action selector="sceneWasTapped:" destination="qS9-d4-1bl" id="US7-RG-XXb"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="FV4-31-FbL" userLabel="doubleTapGestureRecognizer">
+                    <connections>
+                        <action selector="sceneWasDoubleTapped:" destination="qS9-d4-1bl" id="VvO-o9-p26"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-1188" y="595"/>
+        </scene>
+    </scenes>
+</document>

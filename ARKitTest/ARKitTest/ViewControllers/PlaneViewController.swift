@@ -12,8 +12,9 @@ import ARKit
 
 class PlaneViewController: UIViewController {
     @IBOutlet weak var sceneView: ARSCNView!
-    @IBOutlet weak var label: UILabel!
 
+    var planes = [OverlayPlane]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -56,18 +57,21 @@ extension PlaneViewController: ARSCNViewDelegate {
         guard let planeAnchor = anchor as? ARPlaneAnchor else {
             return
         }
-        
-        DispatchQueue.main.async {
-            self.label.text = "Plane Detected"
-            
-            UIView.animate(withDuration: 3.0, animations: {
-                self.label.alpha = 1.0
-            }, completion: { _ in
-                self.label.alpha = 0.0
-            })
-        }
-        
+    
         let plane = OverlayPlane(anchor: planeAnchor)
+        planes.append(plane)
         node.addChildNode(plane)
+    }
+    
+    func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
+        
+        let plane = planes.filter { plane in
+            return plane.anchor.identifier == anchor.identifier
+        }.first
+        
+        if let plane = plane,
+            let anchor = anchor as? ARPlaneAnchor {
+            plane.update(withAnchor: anchor)
+        }
     }
 }

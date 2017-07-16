@@ -14,7 +14,12 @@
 		931822991F18198E004F07B8 /* BaseSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931822981F18198E004F07B8 /* BaseSceneViewController.swift */; };
 		9318229B1F184070004F07B8 /* PlaneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9318229A1F184070004F07B8 /* PlaneViewController.swift */; };
 		9318229E1F184580004F07B8 /* OverlayPlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9318229D1F184580004F07B8 /* OverlayPlane.swift */; };
+		935733251F18601B00198871 /* PlanePlacementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935733241F18601B00198871 /* PlanePlacementViewController.swift */; };
+		935733271F186F9E00198871 /* PhysicsDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935733261F186F9E00198871 /* PhysicsDetectionViewController.swift */; };
+		935733291F18730900198871 /* CollisionDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935733281F18730900198871 /* CollisionDetectionViewController.swift */; };
 		938BF6661F17197F004D81F2 /* Sphere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938BF6651F17197F004D81F2 /* Sphere.swift */; };
+		9398A1111F1950E200BAFC0C /* ForceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9398A1101F1950E200BAFC0C /* ForceViewController.swift */; };
+		9398A1141F19512400BAFC0C /* Force.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9398A1121F19512400BAFC0C /* Force.storyboard */; };
 		93BABB361F168DA5006145D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BABB351F168DA5006145D3 /* AppDelegate.swift */; };
 		93BABB571F16A1DB006145D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93BABB4E1F169FC1006145D3 /* LaunchScreen.storyboard */; };
 		93BABB581F16A1DE006145D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93BABB501F169FC1006145D3 /* Main.storyboard */; };
@@ -33,7 +38,12 @@
 		931822981F18198E004F07B8 /* BaseSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSceneViewController.swift; sourceTree = "<group>"; };
 		9318229A1F184070004F07B8 /* PlaneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneViewController.swift; sourceTree = "<group>"; };
 		9318229D1F184580004F07B8 /* OverlayPlane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayPlane.swift; sourceTree = "<group>"; };
+		935733241F18601B00198871 /* PlanePlacementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanePlacementViewController.swift; sourceTree = "<group>"; };
+		935733261F186F9E00198871 /* PhysicsDetectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsDetectionViewController.swift; sourceTree = "<group>"; };
+		935733281F18730900198871 /* CollisionDetectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollisionDetectionViewController.swift; sourceTree = "<group>"; };
 		938BF6651F17197F004D81F2 /* Sphere.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sphere.swift; sourceTree = "<group>"; };
+		9398A1101F1950E200BAFC0C /* ForceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceViewController.swift; sourceTree = "<group>"; };
+		9398A1131F19512400BAFC0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ARKitTest/Resources/Storyboards/Base.lproj/Force.storyboard; sourceTree = "<group>"; };
 		93BABB321F168DA5006145D3 /* ARKitTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARKitTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93BABB351F168DA5006145D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93BABB4C1F169FA1006145D3 /* SimpleCubeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCubeViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +134,10 @@
 				93BABB5D1F16B497006145D3 /* MultipleSphereViewController.swift */,
 				931822911F181501004F07B8 /* TapsViewController.swift */,
 				9318229A1F184070004F07B8 /* PlaneViewController.swift */,
+				935733241F18601B00198871 /* PlanePlacementViewController.swift */,
+				935733261F186F9E00198871 /* PhysicsDetectionViewController.swift */,
+				935733281F18730900198871 /* CollisionDetectionViewController.swift */,
+				9398A1101F1950E200BAFC0C /* ForceViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -133,6 +147,7 @@
 			children = (
 				93BABB4E1F169FC1006145D3 /* LaunchScreen.storyboard */,
 				93BABB501F169FC1006145D3 /* Main.storyboard */,
+				9398A1121F19512400BAFC0C /* Force.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -225,6 +240,7 @@
 				931822901F181401004F07B8 /* Assets.xcassets in Resources */,
 				93BABB571F16A1DB006145D3 /* LaunchScreen.storyboard in Resources */,
 				93BABB5A1F16ADC0006145D3 /* art.scnassets in Resources */,
+				9398A1141F19512400BAFC0C /* Force.storyboard in Resources */,
 				93BABB581F16A1DE006145D3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,9 +260,13 @@
 				93BABB591F16A1FE006145D3 /* SimpleCubeViewController.swift in Sources */,
 				93BABB5C1F16B0AE006145D3 /* TextDisplayViewController.swift in Sources */,
 				931822991F18198E004F07B8 /* BaseSceneViewController.swift in Sources */,
+				9398A1111F1950E200BAFC0C /* ForceViewController.swift in Sources */,
 				9318229B1F184070004F07B8 /* PlaneViewController.swift in Sources */,
 				931822951F181709004F07B8 /* CGFloat+Random.swift in Sources */,
 				93BABB5E1F16B497006145D3 /* MultipleSphereViewController.swift in Sources */,
+				935733291F18730900198871 /* CollisionDetectionViewController.swift in Sources */,
+				935733271F186F9E00198871 /* PhysicsDetectionViewController.swift in Sources */,
+				935733251F18601B00198871 /* PlanePlacementViewController.swift in Sources */,
 				93BABB631F16B60F006145D3 /* NodeConfig.swift in Sources */,
 				93BABB611F16B56C006145D3 /* Box.swift in Sources */,
 			);
@@ -255,6 +275,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		9398A1121F19512400BAFC0C /* Force.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9398A1131F19512400BAFC0C /* Base */,
+			);
+			name = Force.storyboard;
+			sourceTree = "<group>";
+		};
 		93BABB4E1F169FC1006145D3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
